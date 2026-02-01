@@ -1,8 +1,10 @@
 import "./register.css";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
-    const[error,setError]=useState("")
+    const[error,setError]=useState("");
+    const navigate=useNavigate();
     const[formData,setFormData]=useState({
         name:"",
         email:"",
@@ -29,13 +31,16 @@ const Register = () => {
 
         setError(""); 
         try{
-                   e.preventDefault();
-        var response=axios.post("https://gym-backend-production-d89b.up.railway.app/api/Member/register",{ 
+        e.preventDefault();
+        const  response=axios.post("https://gym-backend-production-d89b.up.railway.app/api/Member/register",{ 
             name:formData.name,
             email:formData.email,
             phone:formData.phone,
             password:formData.password
           });
+        if(response.status==200){
+          navigate("/login")
+        }
         console.log(response);
         }
         catch(err){
