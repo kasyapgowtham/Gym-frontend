@@ -30,7 +30,7 @@ const Register = () => {
         setError(""); 
         try{
                    e.preventDefault();
-        var response=axios.post("https://localhost:7257/api/Member/register",{ 
+        var response=axios.post("https://gym-backend-production-d89b.up.railway.app/api/Member/register",{ 
             name:formData.name,
             email:formData.email,
             phone:formData.phone,

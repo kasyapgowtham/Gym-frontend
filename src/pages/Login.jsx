@@ -29,7 +29,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axios.post("https://localhost:7257/api/Member/login", {
+      const response = await axios.post("https://gym-backend-production-d89b.up.railway.app/api/Member/login", {
         email: loginData.email,
         password: loginData.password
       });
