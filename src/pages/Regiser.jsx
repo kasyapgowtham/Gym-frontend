@@ -18,7 +18,7 @@ const Register = () => {
             [e.target.id]:e.target.value
         });
     }
-    const handleRegister = (e) => {
+    const handleRegister = async(e) => {
         e.preventDefault();
         if (formData.password !== formData.confirmPassword) {
         setError("Passwords do not match");
@@ -32,7 +32,7 @@ const Register = () => {
         setError(""); 
         try{
         e.preventDefault();
-        const  response=axios.post("https://gym-backend-production-d89b.up.railway.app/api/Member/register",{ 
+        const  response= await axios.post("https://gym-backend-production-d89b.up.railway.app/api/Member/register",{ 
             name:formData.name,
             email:formData.email,
             phone:formData.phone,
