@@ -1,0 +1,74 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1546483875-ad9014c88eba");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.home-title {
+  color: #ff5722;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.home-subtitle {
+  color: #bbb;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  width: 260px;
+  padding: 30px;
+  border-radius: 16px;
+  cursor: pointer;
+  background: rgba(20, 20, 20, 0.95);
+  box-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card h2 {
+  color: #ff9800;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.plan-card p {
+  color: #ddd;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.plan-card span {
+  color: #ff5722;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 152, 0, 0.9);
+}
+
+/* Optional individual plan accents */
+.plan-a {
+  border-top: 4px solid #ff5722;
+}
+
+.plan-b {
+  border-top: 4px solid #ff9800;
+}
