@@ -14,6 +14,10 @@ const Home = () => {
   };
 
   return (
+    <>
+    <div className="top-right">
+      <a href="/login" style={{color: "orange"}}>Logout</a>
+    </div>
     <div className="home-container">
       <h1 className="home-title">Choose Your Fitness Plan 💪</h1>
       <p className="home-subtitle">
@@ -40,6 +44,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

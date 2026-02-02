@@ -65,3 +65,44 @@
   color: #ccc;
   line-height: 1.6;
 }
+.muscle-btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.muscle-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Previous button */
+.muscle-btn.secondary {
+  background: #2c2c2c;
+  color: #fff;
+  border: 1px solid #ff5722;
+}
+
+.muscle-btn.secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 87, 34, 0.6);
+}
+
+/* Pay button */
+.muscle-btn.primary {
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: #fff;
+}
+
+.muscle-btn.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.8);
+}
+

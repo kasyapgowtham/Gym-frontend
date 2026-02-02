@@ -1,7 +1,9 @@
 import Accordion from "./Accordion.jsx";
 import "./Muscle.css";
+import { useNavigate } from "react-router-dom";
 
 const MusclePlan = () => {
+  const navigate=useNavigate();
   return (
     <div className="muscle-container">
       <div className="muscle-card">
@@ -31,6 +33,22 @@ Food: Lean meat, complex carbs"
           content="Workout: Heavy lifting + form focus
 Food: Clean bulk, controlled calories"
         />
+         {/* 🔘 Action Buttons */}
+        <div className="muscle-btn-group">
+          <button
+            className="muscle-btn secondary"
+            onClick={() => navigate("/home")}
+          >
+            ← Previous
+          </button>
+
+          <button
+            className="muscle-btn primary"
+            onClick={() => navigate("/payment")}
+          >
+            Pay Now 💳
+          </button>
+        </div>
       </div>
     </div>
   );

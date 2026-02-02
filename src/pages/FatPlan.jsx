@@ -1,7 +1,9 @@
 import Accordion from "./Accordion.jsx";
 import "./fat.css";
+import { useNavigate } from "react-router-dom";
 
 const FatPlan = () => {
+  const navigate=useNavigate();
   return (
     <div className="fat-container">
       <div className="fat-card">
@@ -31,6 +33,22 @@ Food: Protein rich, hydration focus"
           content="Workout: HIIT + core
 Food: Clean meals, calorie deficit"
         />
+          {/* 🔘 Action Buttons */}
+        <div className="fat-btn-group">
+          <button
+            className="fat-btn secondary"
+            onClick={() => navigate("/home")}
+          >
+            ← Previous
+          </button>
+
+          <button
+            className="fat-btn primary"
+            onClick={() => navigate("/payment")}
+          >
+            Pay Now 💳
+          </button>
+        </div>
       </div>
     </div>
   );
