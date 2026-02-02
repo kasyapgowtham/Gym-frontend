@@ -1,9 +1,16 @@
 import "./home.css";
-
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+   const navigate = useNavigate();
   const handlePlanClick = (planName) => {
-    alert(`You selected ${planName}`);
+    //alert(`You selected ${planName}`);
     // later: navigate(`/plan/${planName}`)
+    if(planName=="Plan A"){
+      navigate("/muscle");
+    }
+    else if(planName=="Plan B"){
+      navigate("/fat");
+    }
   };
 
   return (
