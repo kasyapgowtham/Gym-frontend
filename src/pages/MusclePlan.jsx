@@ -3,6 +3,12 @@ import "./Muscle.css";
 import { useNavigate } from "react-router-dom";
 
 const MusclePlan = () => {
+    const payNow = () => {
+  const upiLink =
+    "upi://pay?pa=success@razorpay&pn=TestPayment&am=10&cu=INR&tn=TestingPayment";
+
+  window.location.href = upiLink;
+};
   const navigate=useNavigate();
   return (
     <div className="muscle-container">
@@ -44,7 +50,7 @@ Food: Clean bulk, controlled calories"
 
           <button
             className="muscle-btn primary"
-            onClick={() => navigate("/payment")}
+            onClick={payNow}
           >
             Pay Now 💳
           </button>

@@ -3,6 +3,12 @@ import "./fat.css";
 import { useNavigate } from "react-router-dom";
 
 const FatPlan = () => {
+  const payNow = () => {
+  const upiLink =
+    "upi://pay?pa=success@razorpay&pn=TestPayment&am=10&cu=INR&tn=TestingPayment";
+
+  window.location.href = upiLink;
+};
   const navigate=useNavigate();
   return (
     <div className="fat-container">
@@ -44,7 +50,7 @@ Food: Clean meals, calorie deficit"
 
           <button
             className="fat-btn primary"
-            onClick={() => navigate("/payment")}
+            onClick={payNow}
           >
             Pay Now 💳
           </button>
