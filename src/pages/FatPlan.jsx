@@ -3,12 +3,25 @@ import "./fat.css";
 import { useNavigate } from "react-router-dom";
 
 const FatPlan = () => {
-  const payNow = () => {
+const payNow = () => {
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (!isMobile) {
+    alert("Open this page on mobile to test UPI payment.");
+    return;
+  }
+
   const upiLink =
     "upi://pay?pa=success@razorpay&pn=TestPayment&am=10&cu=INR&tn=TestingPayment";
 
-  window.location.href = upiLink;
+  const a = document.createElement("a");
+  a.href = upiLink;
+  a.style.display = "none";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 };
+
   const navigate=useNavigate();
   return (
     <div className="fat-container">
